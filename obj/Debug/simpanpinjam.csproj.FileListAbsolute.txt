@@ -1,0 +1,17 @@
+D:\vs\simpanpinjam\bin\Debug\simpanpinjam.exe.config
+D:\vs\simpanpinjam\bin\Debug\simpanpinjam.exe
+D:\vs\simpanpinjam\bin\Debug\simpanpinjam.pdb
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.csprojAssemblyReference.cache
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.Properties.Resources.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.sisi.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.csproj.GenerateResource.cache
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.csproj.CoreCompileInputs.cache
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.exe
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.pdb
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.RefDep.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.RefDepAdd.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.AnggotaAdd.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.AnggotaList.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.login.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.ForgotPassword.resources
+D:\vs\simpanpinjam\obj\Debug\simpanpinjam.SimpananAdd.resources
