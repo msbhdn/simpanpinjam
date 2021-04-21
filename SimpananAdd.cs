@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using simpanpinjam.myclass;
 
 namespace simpanpinjam
 {
     public partial class SimpananAdd : Form
     {
+        CRUD crud = new CRUD();
+
         public SimpananAdd()
         {
             InitializeComponent();
@@ -21,47 +24,39 @@ namespace simpanpinjam
             dd();
 
         }
-        OdbcConnection koneksi = new OdbcConnection(@"Dsn=sisi;uid=root");
 
         private void dd()
         {
-            DataTable dt = new DataTable();
+            dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
+            crud.read_dataSimpanan();
+            dataGridView1.DataSource = crud.dtSimpanan;
 
-            OdbcDataAdapter da = new OdbcDataAdapter("select * from v_simpanan", koneksi);
-            da.Fill(dt);
+            dataGridView1.Columns[0].HeaderText = "No Anggota";
+            dataGridView1.Columns[1].HeaderText = "NIPP";
+            dataGridView1.Columns[2].HeaderText = "Nama";
+            dataGridView1.Columns[3].HeaderText = "Jenis Simpan";
+            dataGridView1.Columns[4].HeaderText = "Jumlah Simpan";
+            dataGridView1.Columns[5].HeaderText = "Tanggal Simpan";
 
-            foreach (DataRow row in dt.Rows)
-            {
-                ListViewItem item = new ListViewItem(row[0].ToString());
-                for (int i = 1; i < dt.Columns.Count; i++)
-                {
-                    item.SubItems.Add(row[i].ToString());
-                }
-                listView1.Items.Add(item);
-            }
-            listView1.Columns[0].Width = -2;
-            listView1.Columns[1].Width = -2;
-            listView1.Columns[2].Width = -2;
-            listView1.Columns[3].Width = -2;
-            listView1.Columns[4].Width = -2;
-            listView1.Columns[5].Width = -2;
-            listView1.Columns[6].Width = -2;
-            listView1.Columns[7].Width = -1;
+            dataGridView1.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+
+            // Resize the master DataGridView columns to fit the newly loaded data.
+            dataGridView1.AutoResizeColumns();
+
+            // Configure the details DataGridView so that its columns automatically
+            // adjust their widths when the data changes.
+            dataGridView1.AutoSizeColumnsMode =
+                DataGridViewAutoSizeColumnsMode.AllCells;
         }
         private void cbanggota()
         {
-            DataTable temp = new DataTable();
-            DataTable bank = new DataTable();
             cbAnggota.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbAnggota.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            OdbcCommand cmd = new OdbcCommand("select anggota_no, anggota_nama from tm_anggota", koneksi);
-            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
-            da.SelectCommand = cmd;
-            da.Fill(temp);
-            DataView dtvw = new DataView(temp);
-            bank = dtvw.ToTable();
-            cbAnggota.DataSource = bank;
+            crud.read_cbAnggota();
+
+            cbAnggota.DataSource = crud.bankcbAnggota;
             cbAnggota.ValueMember = "anggota_no";
             cbAnggota.DisplayMember = "anggota_nama";
 
@@ -69,18 +64,12 @@ namespace simpanpinjam
         }
         private void cbJsimpanan()
         {
-            DataTable temp = new DataTable();
-            DataTable bank = new DataTable();
             cbJSimpanan.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
             cbJSimpanan.AutoCompleteSource = AutoCompleteSource.ListItems;
 
-            OdbcCommand cmd = new OdbcCommand("select js_id, js_nama from tr_simpanan", koneksi);
-            OdbcDataAdapter da = new OdbcDataAdapter(cmd);
-            da.SelectCommand = cmd;
-            da.Fill(temp);
-            DataView dtvw = new DataView(temp);
-            bank = dtvw.ToTable();
-            cbJSimpanan.DataSource = bank;
+            crud.read_cbJsimpanan();
+
+            cbJSimpanan.DataSource = crud.bankcbJsimpanan;
             cbJSimpanan.ValueMember = "js_id";
             cbJSimpanan.DisplayMember = "js_nama";
 
@@ -150,7 +139,6 @@ namespace simpanpinjam
                 textBox1.Text = "";
                 cbJSimpanan.SelectedIndex = -1;
                 cbAnggota.SelectedIndex = -1;
-                listView1.Items.Clear();
                 dd();
             }
         }

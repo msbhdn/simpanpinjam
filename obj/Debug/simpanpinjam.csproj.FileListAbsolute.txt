@@ -15,3 +15,20 @@ D:\vs\simpanpinjam\obj\Debug\simpanpinjam.AnggotaList.resources
 D:\vs\simpanpinjam\obj\Debug\simpanpinjam.login.resources
 D:\vs\simpanpinjam\obj\Debug\simpanpinjam.ForgotPassword.resources
 D:\vs\simpanpinjam\obj\Debug\simpanpinjam.SimpananAdd.resources
+D:\vs\New folder\sisi\bin\Debug\simpanpinjam.exe.config
+D:\vs\New folder\sisi\bin\Debug\simpanpinjam.exe
+D:\vs\New folder\sisi\bin\Debug\simpanpinjam.pdb
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.csprojAssemblyReference.cache
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.AnggotaAdd.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.AnggotaList.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.ForgotPassword.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.login.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.Properties.Resources.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.RefDep.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.RefDepAdd.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.SimpananAdd.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.sisi.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.csproj.GenerateResource.cache
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.csproj.CoreCompileInputs.cache
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.exe
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.pdb

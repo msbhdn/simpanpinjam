@@ -26,6 +26,7 @@ namespace simpanpinjam
         private void dd()
         {
             dataGridView1.DataSource = null;
+            dataGridView1.Refresh();
             crud.read_dataAnggota();
             dataGridView1.DataSource = crud.dtAnggota;
 
@@ -34,6 +35,8 @@ namespace simpanpinjam
             dataGridView1.Columns[2].HeaderText = "Nama";
             dataGridView1.Columns[3].HeaderText = "Jabatan";
             dataGridView1.Columns[4].HeaderText = "Unit Kerja";
+
+            dataGridView1.Columns[5].Visible = false;
 
             // Resize the master DataGridView columns to fit the newly loaded data.
             dataGridView1.AutoResizeColumns();
@@ -58,64 +61,46 @@ namespace simpanpinjam
 
         private void btn_add_Click(object sender, EventArgs e)
         {
-            if (String.IsNullOrEmpty(tb_nipp.Text))
+            if (String.IsNullOrEmpty(crud.AID))
             {
-                MessageBox.Show("NIPP Tidak Boleh Kosong");
-            }
-            else if (String.IsNullOrEmpty(tb_nama.Text))
-            {
-                MessageBox.Show("Nama Tidak Boleh Kosong");
-            }
-            else if (String.IsNullOrEmpty(tb_jab.Text))
-            {
-                MessageBox.Show("Jabatan Tidak Boleh Kosong");
-            }
-            else if (cb_dept.SelectedIndex == -1)
-            {
-                MessageBox.Show("Unit Kerja Tidak Boleh Kosong");
+                if (String.IsNullOrEmpty(tb_nipp.Text))
+                {
+                    MessageBox.Show("NIPP Tidak Boleh Kosong");
+                }
+                else if (String.IsNullOrEmpty(tb_nama.Text))
+                {
+                    MessageBox.Show("Nama Tidak Boleh Kosong");
+                }
+                else if (String.IsNullOrEmpty(tb_jab.Text))
+                {
+                    MessageBox.Show("Jabatan Tidak Boleh Kosong");
+                }
+                else if (cb_dept.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Unit Kerja Tidak Boleh Kosong");
+                }
+                else
+                {
+                    crud.Anipp = tb_nipp.Text;
+                    crud.Anama = tb_nama.Text;
+                    crud.Ajab = tb_jab.Text;
+                    crud.Adept = cb_dept.SelectedValue;
+                    crud.create_dataAnggota();
+                    dd();
+                    tb_nipp.Text = "";
+                    tb_nama.Text = "";
+                    tb_jab.Text = "";
+                    cb_dept.SelectedIndex = -1;
+                }
             }
             else
             {
-                using (OdbcConnection con = new OdbcConnection(@"Dsn=sisi;uid=root"))
-                {
-                    try
-                    {
-
-                        using (var cmd2 = new OdbcCommand("INSERT INTO tm_anggota (anggota_no, anggota_nipp, anggota_nama, anggota_jab, anggota_dept, userid)" +
-                            " VALUES (" +
-                            "getanggotano()," +
-                            "'" + this.tb_nipp.Text + "'," +
-                            "'" + this.tb_nama.Text + "'," +
-                            "'" + this.tb_jab.Text + "'," +
-                            "'" + this.cb_dept.SelectedValue + "'," +
-                            "'" + global.userid + "'" +
-                            ")"))
-                        {
-
-                            cmd2.Connection = con;
-
-                            con.Open();
-                            if (cmd2.ExecuteNonQuery() > 0)
-                            {
-                                MessageBox.Show("Record inserted");
-                            }
-                            else
-                            {
-                                MessageBox.Show("Record failed");
-                            }
-                        }
-                    }
-                    catch (Exception c)
-                    {
-                        MessageBox.Show("Error during insert: " + c.Message);
-                    }
-                }
-                tb_nipp.Text = "";
-                tb_nama.Text = "";
-                tb_jab.Text = "";
-                cb_dept.SelectedIndex = -1;
-                dataGridView1.DataSource = null;
-                dataGridView1.Refresh();
+                //MessageBox.Show(crud.AID);
+                crud.Anipp = tb_nipp.Text;
+                crud.Anama = tb_nama.Text;
+                crud.Ajab = tb_jab.Text;
+                crud.Adept = cb_dept.SelectedValue;
+                crud.update_dataAnggota();
                 dd();
             }
         }
@@ -125,6 +110,39 @@ namespace simpanpinjam
             crud.read_SdataAnggota(tb_cari.Text);
             dataGridView1.DataSource = crud.dtSanggota;
             crud.conClose();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show(crud.AID);
+            //new AnggotaAdd().Show();
+            crud.AID = "";
+            tb_nipp.Text = "";
+            tb_nama.Text = "";
+            tb_jab.Text = "";
+            cb_dept.SelectedIndex = -1;
+            btn_add.Text = "Simpan";
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+                {
+                    crud.AID = (dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    tb_nipp.Text = (dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    tb_nama.Text = (dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString());
+                    tb_jab.Text = (dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString());
+                    cb_dept.SelectedValue = (dataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString());
+
+                    btn_add.Text = "Update";
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Don't click the header!");
+            }
         }
     }
 }

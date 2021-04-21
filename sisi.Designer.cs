@@ -364,7 +364,7 @@
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Padding = new System.Windows.Forms.Padding(25, 25, 0, 0);
+            this.panelChildForm.Padding = new System.Windows.Forms.Padding(25, 25, 0, 25);
             this.panelChildForm.Size = new System.Drawing.Size(721, 600);
             this.panelChildForm.TabIndex = 1;
             // 

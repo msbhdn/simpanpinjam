@@ -8,16 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using simpanpinjam.myclass;
 
 namespace simpanpinjam
 {
     public partial class AnggotaAdd : Form
     {
+        CRUD crud = new CRUD();
+
         OdbcConnection koneksi = new OdbcConnection(@"Dsn=sisi;uid=root");
         public AnggotaAdd()
         {
             InitializeComponent();
             Cbdept();
+            textBox2.Text = crud.AID;
         }
         private void Cbdept()
         {

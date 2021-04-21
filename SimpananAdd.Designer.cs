@@ -31,15 +31,6 @@
             this.cbAnggota = new System.Windows.Forms.ComboBox();
             this.cbJSimpanan = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label1 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -50,9 +41,11 @@
             this.button1 = new System.Windows.Forms.Button();
             this.labelJumlahSimpan = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,69 +73,6 @@
             this.textBox1.TabIndex = 1;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
-            // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.GridLines = true;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 13);
-            this.listView1.MultiSelect = false;
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(680, 376);
-            this.listView1.TabIndex = 4;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "No Anggota";
-            this.columnHeader1.Width = 25;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "NIPP";
-            this.columnHeader2.Width = 37;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Nama";
-            this.columnHeader3.Width = 40;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Jabatan";
-            this.columnHeader4.Width = 50;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Unit Kerja";
-            this.columnHeader5.Width = 58;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Jenis";
-            this.columnHeader6.Width = 36;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Jumlah";
-            this.columnHeader7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.columnHeader7.Width = 45;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Tanggal Simpan";
-            this.columnHeader8.Width = 100;
             // 
             // label1
             // 
@@ -243,13 +173,26 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.listView1);
+            this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 147);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(680, 389);
             this.panel1.TabIndex = 10;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 13);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(680, 376);
+            this.dataGridView1.TabIndex = 6;
             // 
             // panel2
             // 
@@ -276,6 +219,7 @@
             this.groupBox1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -287,7 +231,6 @@
         private System.Windows.Forms.ComboBox cbAnggota;
         private System.Windows.Forms.ComboBox cbJSimpanan;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -297,15 +240,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelJumlahSimpan;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

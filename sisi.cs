@@ -91,8 +91,6 @@ namespace simpanpinjam
         }
         
 
-
-
         private Form activeForm = null;
         private void openChildForm(Form childForm)
         {

@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Odbc;
+using simpanpinjam.myclass;
 
 namespace simpanpinjam
 {
     public partial class RefDepAdd : Form
     {
+        CRUD crud = new CRUD();
+
         public RefDepAdd()
         {
             InitializeComponent();
