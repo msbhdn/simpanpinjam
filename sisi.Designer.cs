@@ -48,12 +48,14 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.labelWelcome = new System.Windows.Forms.Label();
             this.panelSideMenu.SuspendLayout();
             this.panelRefSubmenu.SuspendLayout();
             this.panelTransSubMenu.SuspendLayout();
             this.panelAnggotaSubMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelChildForm.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -87,7 +89,7 @@
             this.btnSignOut.Location = new System.Drawing.Point(0, 634);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSignOut.Size = new System.Drawing.Size(212, 45);
+            this.btnSignOut.Size = new System.Drawing.Size(208, 45);
             this.btnSignOut.TabIndex = 6;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -104,7 +106,7 @@
             this.panelRefSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRefSubmenu.Location = new System.Drawing.Point(0, 493);
             this.panelRefSubmenu.Name = "panelRefSubmenu";
-            this.panelRefSubmenu.Size = new System.Drawing.Size(212, 141);
+            this.panelRefSubmenu.Size = new System.Drawing.Size(208, 141);
             this.panelRefSubmenu.TabIndex = 2;
             // 
             // btnRefJS
@@ -117,7 +119,7 @@
             this.btnRefJS.Location = new System.Drawing.Point(0, 90);
             this.btnRefJS.Name = "btnRefJS";
             this.btnRefJS.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefJS.Size = new System.Drawing.Size(212, 45);
+            this.btnRefJS.Size = new System.Drawing.Size(208, 45);
             this.btnRefJS.TabIndex = 1;
             this.btnRefJS.Text = "Jenis Simpanan";
             this.btnRefJS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +135,7 @@
             this.btnRefDepAdd.Location = new System.Drawing.Point(0, 45);
             this.btnRefDepAdd.Name = "btnRefDepAdd";
             this.btnRefDepAdd.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefDepAdd.Size = new System.Drawing.Size(212, 45);
+            this.btnRefDepAdd.Size = new System.Drawing.Size(208, 45);
             this.btnRefDepAdd.TabIndex = 2;
             this.btnRefDepAdd.Text = "Departemen Add";
             this.btnRefDepAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -150,7 +152,7 @@
             this.btnRefDep.Location = new System.Drawing.Point(0, 0);
             this.btnRefDep.Name = "btnRefDep";
             this.btnRefDep.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefDep.Size = new System.Drawing.Size(212, 45);
+            this.btnRefDep.Size = new System.Drawing.Size(208, 45);
             this.btnRefDep.TabIndex = 0;
             this.btnRefDep.Text = "Departemen";
             this.btnRefDep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,7 +170,7 @@
             this.btnRef.Location = new System.Drawing.Point(0, 448);
             this.btnRef.Name = "btnRef";
             this.btnRef.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRef.Size = new System.Drawing.Size(212, 45);
+            this.btnRef.Size = new System.Drawing.Size(208, 45);
             this.btnRef.TabIndex = 1;
             this.btnRef.Text = "Referensi";
             this.btnRef.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -185,7 +187,7 @@
             this.panelTransSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTransSubMenu.Location = new System.Drawing.Point(0, 308);
             this.panelTransSubMenu.Name = "panelTransSubMenu";
-            this.panelTransSubMenu.Size = new System.Drawing.Size(212, 140);
+            this.panelTransSubMenu.Size = new System.Drawing.Size(208, 140);
             this.panelTransSubMenu.TabIndex = 4;
             // 
             // button3
@@ -198,7 +200,7 @@
             this.button3.Location = new System.Drawing.Point(0, 90);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(212, 45);
+            this.button3.Size = new System.Drawing.Size(208, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Angsuran";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +216,7 @@
             this.button4.Location = new System.Drawing.Point(0, 45);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(212, 45);
+            this.button4.Size = new System.Drawing.Size(208, 45);
             this.button4.TabIndex = 1;
             this.button4.Text = "Pinjaman";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -230,7 +232,7 @@
             this.button6.Location = new System.Drawing.Point(0, 0);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(212, 45);
+            this.button6.Size = new System.Drawing.Size(208, 45);
             this.button6.TabIndex = 0;
             this.button6.Text = "Simpanan";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -248,7 +250,7 @@
             this.btnTrans.Location = new System.Drawing.Point(0, 263);
             this.btnTrans.Name = "btnTrans";
             this.btnTrans.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTrans.Size = new System.Drawing.Size(212, 45);
+            this.btnTrans.Size = new System.Drawing.Size(208, 45);
             this.btnTrans.TabIndex = 5;
             this.btnTrans.Text = "Transaksi";
             this.btnTrans.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -264,7 +266,7 @@
             this.panelAnggotaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAnggotaSubMenu.Location = new System.Drawing.Point(0, 174);
             this.panelAnggotaSubMenu.Name = "panelAnggotaSubMenu";
-            this.panelAnggotaSubMenu.Size = new System.Drawing.Size(212, 89);
+            this.panelAnggotaSubMenu.Size = new System.Drawing.Size(208, 89);
             this.panelAnggotaSubMenu.TabIndex = 3;
             // 
             // btnAnggotaAdd
@@ -277,7 +279,7 @@
             this.btnAnggotaAdd.Location = new System.Drawing.Point(0, 45);
             this.btnAnggotaAdd.Name = "btnAnggotaAdd";
             this.btnAnggotaAdd.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnAnggotaAdd.Size = new System.Drawing.Size(212, 45);
+            this.btnAnggotaAdd.Size = new System.Drawing.Size(208, 45);
             this.btnAnggotaAdd.TabIndex = 1;
             this.btnAnggotaAdd.Text = "Tambah Anggota";
             this.btnAnggotaAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +296,7 @@
             this.btnAnggotaList.Location = new System.Drawing.Point(0, 0);
             this.btnAnggotaList.Name = "btnAnggotaList";
             this.btnAnggotaList.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnAnggotaList.Size = new System.Drawing.Size(212, 45);
+            this.btnAnggotaList.Size = new System.Drawing.Size(208, 45);
             this.btnAnggotaList.TabIndex = 0;
             this.btnAnggotaList.Text = "Daftar Anggota";
             this.btnAnggotaList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -312,7 +314,7 @@
             this.btnAnggota.Location = new System.Drawing.Point(0, 129);
             this.btnAnggota.Name = "btnAnggota";
             this.btnAnggota.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAnggota.Size = new System.Drawing.Size(212, 45);
+            this.btnAnggota.Size = new System.Drawing.Size(208, 45);
             this.btnAnggota.TabIndex = 4;
             this.btnAnggota.Text = "Anggota";
             this.btnAnggota.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -331,7 +333,7 @@
             this.btnHome.Location = new System.Drawing.Point(0, 84);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(212, 45);
+            this.btnHome.Size = new System.Drawing.Size(208, 45);
             this.btnHome.TabIndex = 3;
             this.btnHome.Text = "Dashboard";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -345,7 +347,7 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(212, 84);
+            this.panelLogo.Size = new System.Drawing.Size(208, 84);
             this.panelLogo.TabIndex = 0;
             // 
             // pictureBox1
@@ -361,6 +363,7 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panelChildForm.Controls.Add(this.labelWelcome);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 0);
             this.panelChildForm.Name = "panelChildForm";
@@ -368,9 +371,18 @@
             this.panelChildForm.Size = new System.Drawing.Size(721, 600);
             this.panelChildForm.TabIndex = 1;
             // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Location = new System.Drawing.Point(151, 250);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(0, 25);
+            this.labelWelcome.TabIndex = 0;
+            // 
             // sisi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 600);
             this.Controls.Add(this.panelChildForm);
@@ -387,6 +399,8 @@
             this.panelAnggotaSubMenu.ResumeLayout(false);
             this.panelLogo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelChildForm.ResumeLayout(false);
+            this.panelChildForm.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -413,6 +427,7 @@
         private System.Windows.Forms.Button btnTrans;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSignOut;
+        private System.Windows.Forms.Label labelWelcome;
     }
 }
 

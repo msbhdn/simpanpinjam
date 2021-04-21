@@ -19,7 +19,7 @@ namespace simpanpinjam
             InitializeComponent();
             hideSubMenu();
 
-            //label1.Text = global.userid;
+            labelWelcome.Text = "Selamat Datang "+global.username;
         }
 
 
