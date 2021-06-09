@@ -164,7 +164,7 @@ namespace simpanpinjam.myclass
         }
 
         //CREATE
-        public void create_dataSimpanan()
+        /*public void create_dataSimpanan()
         {
             using (var cmd = new OdbcCommand("INSERT INTO tm_simpanan (simpanan_id, simpanan_tipe, simpanan_jumlah, simpanan_tggl, uuid, userid)"+
                 "VALUES ('" + depID + "','" + depNAME + "')"))
@@ -182,7 +182,13 @@ namespace simpanpinjam.myclass
                     con.Close();
                 }
             }
-        }
+        }*/
+
+
+        //REFERENSI PINJAMAN ==========================================================================================================================
+
+
+
 
         //REFERENSI DEPARTEMENT ==========================================================================================================================
 

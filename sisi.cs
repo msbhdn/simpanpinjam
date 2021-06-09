@@ -19,7 +19,13 @@ namespace simpanpinjam
             InitializeComponent();
             hideSubMenu();
 
-            labelWelcome.Text = "Selamat Datang "+global.username;
+            labelWelcome.Text = "Selamat Datang " + global.username;
+
+            string user = "111";
+            if (global.userid == user)
+            {
+                btnRef.Visible = false;
+            }
         }
 
 
@@ -40,24 +46,24 @@ namespace simpanpinjam
                 subMenu.Visible = false;
         }
 
+        
+        //MENU BUTTON DASHBOARD
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            openChildForm(new dashboard());
+            hideSubMenu();
+        }
 
         //MENU BUTTON ANGGOTA
         private void btnAnggota_Click(object sender, EventArgs e)
         {
             showSubMenu(panelAnggotaSubMenu);
         }
-
-        private void btnAnggotaAdd_Click(object sender, EventArgs e)
-        {
-            openChildForm(new AnggotaAdd());
-            hideSubMenu();
-        }
         private void btnAnggotaList_Click(object sender, EventArgs e)
         {
             openChildForm(new AnggotaList());
             hideSubMenu();
         }
-
 
 
         //MENU BUTTON TRANSAKSI
@@ -69,6 +75,12 @@ namespace simpanpinjam
         private void button6_Click(object sender, EventArgs e)
         {
             openChildForm(new SimpananAdd());
+            hideSubMenu();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            openChildForm(new pinjaman());
             hideSubMenu();
         }
 
@@ -111,5 +123,19 @@ namespace simpanpinjam
             new login().Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var dat = dtpt1.Value;
+            for (int ctr = 1; ctr <= Convert.ToInt32(cbt1.SelectedItem); ctr++)
+            {
+                Console.WriteLine(dat.AddMonths(ctr).ToString("yyyy-MM-15"));
+                Console.WriteLine(ctr);
+            }
+
+
+            /* string dt = dtpt1.Value.ToString("yyyy, MM, dd");
+             long dtl = long.Parse(dt);*/
+            label1.Text = dat.AddMonths(Convert.ToInt32(cbt1.SelectedItem)).ToString("yyyy-MM-15");
+        }
     }
 }

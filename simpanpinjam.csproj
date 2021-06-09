@@ -63,17 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AnggotaAdd.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AnggotaAdd.Designer.cs">
-      <DependentUpon>AnggotaAdd.cs</DependentUpon>
-    </Compile>
     <Compile Include="AnggotaList.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AnggotaList.Designer.cs">
       <DependentUpon>AnggotaList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSetDep.cs">
       <DependentUpon>DataSetDep.xsd</DependentUpon>
@@ -97,6 +97,12 @@
       <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="mycon.cs" />
+    <Compile Include="pinjaman.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pinjaman.Designer.cs">
+      <DependentUpon>pinjaman.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -128,17 +134,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AnggotaAdd.resx">
-      <DependentUpon>AnggotaAdd.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AnggotaList.resx">
       <DependentUpon>AnggotaList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ForgotPassword.resx">
       <DependentUpon>ForgotPassword.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="login.resx">
       <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pinjaman.resx">
+      <DependentUpon>pinjaman.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
