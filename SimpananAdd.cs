@@ -47,7 +47,7 @@ namespace simpanpinjam
             // Configure the details DataGridView so that its columns automatically
             // adjust their widths when the data changes.
             dataGridView1.AutoSizeColumnsMode =
-                DataGridViewAutoSizeColumnsMode.AllCells;
+                DataGridViewAutoSizeColumnsMode.Fill;
         }
         private void cbanggota()
         {

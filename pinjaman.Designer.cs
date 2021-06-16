@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dtpt1 = new System.Windows.Forms.DateTimePicker();
+            this.cbt1 = new System.Windows.Forms.ComboBox();
+            this.cbAnggota = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.tb_pinjam = new System.Windows.Forms.TextBox();
-            this.cbAnggota = new System.Windows.Forms.ComboBox();
-            this.cbt1 = new System.Windows.Forms.ComboBox();
-            this.tb_keperluan = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.tb_keperluan = new System.Windows.Forms.TextBox();
+            this.tb_pinjam = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
-            this.dtpt1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,6 +72,39 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pinjaman";
             // 
+            // dtpt1
+            // 
+            this.dtpt1.CustomFormat = "yyyy, MM, dd";
+            this.dtpt1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpt1.Location = new System.Drawing.Point(115, 54);
+            this.dtpt1.Name = "dtpt1";
+            this.dtpt1.Size = new System.Drawing.Size(115, 20);
+            this.dtpt1.TabIndex = 14;
+            // 
+            // cbt1
+            // 
+            this.cbt1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbt1.FormattingEnabled = true;
+            this.cbt1.Items.AddRange(new object[] {
+            "3",
+            "6",
+            "12",
+            "18",
+            "24",
+            "36"});
+            this.cbt1.Location = new System.Drawing.Point(115, 80);
+            this.cbt1.Name = "cbt1";
+            this.cbt1.Size = new System.Drawing.Size(40, 21);
+            this.cbt1.TabIndex = 13;
+            // 
+            // cbAnggota
+            // 
+            this.cbAnggota.FormattingEnabled = true;
+            this.cbAnggota.Location = new System.Drawing.Point(115, 27);
+            this.cbAnggota.Name = "cbAnggota";
+            this.cbAnggota.Size = new System.Drawing.Size(218, 21);
+            this.cbAnggota.TabIndex = 4;
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
@@ -95,6 +128,15 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "bulan";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(8, 133);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(101, 13);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Keperluan Pinjaman";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -103,65 +145,6 @@
             this.label2.Size = new System.Drawing.Size(86, 13);
             this.label2.TabIndex = 1;
             this.label2.Text = "Jumlah Pinjaman";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 27);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Anggota";
-            // 
-            // tb_pinjam
-            // 
-            this.tb_pinjam.Location = new System.Drawing.Point(115, 107);
-            this.tb_pinjam.Name = "tb_pinjam";
-            this.tb_pinjam.Size = new System.Drawing.Size(113, 20);
-            this.tb_pinjam.TabIndex = 0;
-            this.tb_pinjam.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.tb_pinjam.Leave += new System.EventHandler(this.tb_pinjam_Leave);
-            // 
-            // cbAnggota
-            // 
-            this.cbAnggota.FormattingEnabled = true;
-            this.cbAnggota.Location = new System.Drawing.Point(115, 27);
-            this.cbAnggota.Name = "cbAnggota";
-            this.cbAnggota.Size = new System.Drawing.Size(218, 21);
-            this.cbAnggota.TabIndex = 4;
-            // 
-            // cbt1
-            // 
-            this.cbt1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbt1.FormattingEnabled = true;
-            this.cbt1.Items.AddRange(new object[] {
-            "3",
-            "6",
-            "12",
-            "18",
-            "24",
-            "36"});
-            this.cbt1.Location = new System.Drawing.Point(115, 80);
-            this.cbt1.Name = "cbt1";
-            this.cbt1.Size = new System.Drawing.Size(40, 21);
-            this.cbt1.TabIndex = 13;
-            // 
-            // tb_keperluan
-            // 
-            this.tb_keperluan.Location = new System.Drawing.Point(115, 133);
-            this.tb_keperluan.Multiline = true;
-            this.tb_keperluan.Name = "tb_keperluan";
-            this.tb_keperluan.Size = new System.Drawing.Size(113, 44);
-            this.tb_keperluan.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(63, 54);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Tanggal";
             // 
             // label4
             // 
@@ -172,14 +155,40 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Tenor";
             // 
-            // label5
+            // label3
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(8, 133);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 13);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Keperluan Pinjaman";
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(63, 54);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Tanggal";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(62, 27);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Anggota";
+            // 
+            // tb_keperluan
+            // 
+            this.tb_keperluan.Location = new System.Drawing.Point(115, 133);
+            this.tb_keperluan.Multiline = true;
+            this.tb_keperluan.Name = "tb_keperluan";
+            this.tb_keperluan.Size = new System.Drawing.Size(113, 44);
+            this.tb_keperluan.TabIndex = 0;
+            // 
+            // tb_pinjam
+            // 
+            this.tb_pinjam.Location = new System.Drawing.Point(115, 107);
+            this.tb_pinjam.Name = "tb_pinjam";
+            this.tb_pinjam.Size = new System.Drawing.Size(113, 20);
+            this.tb_pinjam.TabIndex = 0;
+            this.tb_pinjam.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.tb_pinjam.Leave += new System.EventHandler(this.tb_pinjam_Leave);
             // 
             // panel1
             // 
@@ -223,15 +232,6 @@
             this.label6.Size = new System.Drawing.Size(138, 13);
             this.label6.TabIndex = 5;
             this.label6.Text = "Transaksi PinjamanTerakhir";
-            // 
-            // dtpt1
-            // 
-            this.dtpt1.CustomFormat = "yyyy, MM, dd";
-            this.dtpt1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpt1.Location = new System.Drawing.Point(115, 54);
-            this.dtpt1.Name = "dtpt1";
-            this.dtpt1.Size = new System.Drawing.Size(115, 20);
-            this.dtpt1.TabIndex = 14;
             // 
             // pinjaman
             // 

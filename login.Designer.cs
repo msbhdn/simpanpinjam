@@ -36,8 +36,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -134,6 +134,16 @@
             this.panel2.Size = new System.Drawing.Size(350, 561);
             this.panel2.TabIndex = 4;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 369);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(150, 13);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Forgot Password ? - Klik Here!";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Red;
@@ -148,16 +158,6 @@
             this.button2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 369);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(150, 13);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Forgot Password ? - Klik Here!";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // login
             // 

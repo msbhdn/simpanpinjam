@@ -21,11 +21,11 @@ namespace simpanpinjam
 
             labelWelcome.Text = "Selamat Datang " + global.username;
 
-            string user = "111";
+            /*string user = "111";
             if (global.userid == user)
             {
                 btnRef.Visible = false;
-            }
+            }*/
         }
 
 
@@ -84,17 +84,17 @@ namespace simpanpinjam
             hideSubMenu();
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            openChildForm(new angsuran());
+            hideSubMenu();
+        }
+
 
         //MENU BUTTON REFERENSI
         private void btnRef_Click(object sender, EventArgs e)
         {
             showSubMenu(panelRefSubmenu);
-        }
-
-        private void btnRefDepAdd_Click(object sender, EventArgs e)
-        {
-            openChildForm(new RefDepAdd());
-            hideSubMenu();
         }
         private void btnRefDep_Click(object sender, EventArgs e)
         {
@@ -121,21 +121,6 @@ namespace simpanpinjam
         {
             this.Hide();
             new login().Show();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var dat = dtpt1.Value;
-            for (int ctr = 1; ctr <= Convert.ToInt32(cbt1.SelectedItem); ctr++)
-            {
-                Console.WriteLine(dat.AddMonths(ctr).ToString("yyyy-MM-15"));
-                Console.WriteLine(ctr);
-            }
-
-
-            /* string dt = dtpt1.Value.ToString("yyyy, MM, dd");
-             long dtl = long.Parse(dt);*/
-            label1.Text = dat.AddMonths(Convert.ToInt32(cbt1.SelectedItem)).ToString("yyyy-MM-15");
         }
     }
 }

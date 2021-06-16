@@ -24,7 +24,6 @@ D:\vs\New folder\sisi\obj\Debug\simpanpinjam.ForgotPassword.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.login.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.Properties.Resources.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.RefDep.resources
-D:\vs\New folder\sisi\obj\Debug\simpanpinjam.RefDepAdd.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.SimpananAdd.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.sisi.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.csproj.GenerateResource.cache
@@ -33,3 +32,5 @@ D:\vs\New folder\sisi\obj\Debug\simpanpinjam.exe
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.pdb
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.dashboard.resources
 D:\vs\New folder\sisi\obj\Debug\simpanpinjam.pinjaman.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.angsuran.resources
+D:\vs\New folder\sisi\obj\Debug\simpanpinjam.bayarangsuran.resources

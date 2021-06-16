@@ -30,8 +30,6 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelRefSubmenu = new System.Windows.Forms.Panel();
-            this.btnRefJS = new System.Windows.Forms.Button();
-            this.btnRefDepAdd = new System.Windows.Forms.Button();
             this.btnRefDep = new System.Windows.Forms.Button();
             this.panelTransSubMenu = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
@@ -41,10 +39,6 @@
             this.btnAnggotaList = new System.Windows.Forms.Button();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.cbt1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.dtpt1 = new System.Windows.Forms.DateTimePicker();
-            this.label1 = new System.Windows.Forms.Label();
             this.labelWelcome = new System.Windows.Forms.Label();
             this.btnSignOut = new System.Windows.Forms.Button();
             this.btnRef = new System.Windows.Forms.Button();
@@ -83,47 +77,12 @@
             // panelRefSubmenu
             // 
             this.panelRefSubmenu.BackColor = System.Drawing.Color.LightSlateGray;
-            this.panelRefSubmenu.Controls.Add(this.btnRefJS);
-            this.panelRefSubmenu.Controls.Add(this.btnRefDepAdd);
             this.panelRefSubmenu.Controls.Add(this.btnRefDep);
             this.panelRefSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelRefSubmenu.Location = new System.Drawing.Point(0, 451);
             this.panelRefSubmenu.Name = "panelRefSubmenu";
-            this.panelRefSubmenu.Size = new System.Drawing.Size(212, 141);
+            this.panelRefSubmenu.Size = new System.Drawing.Size(229, 48);
             this.panelRefSubmenu.TabIndex = 2;
-            // 
-            // btnRefJS
-            // 
-            this.btnRefJS.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefJS.FlatAppearance.BorderSize = 0;
-            this.btnRefJS.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefJS.ForeColor = System.Drawing.Color.White;
-            this.btnRefJS.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefJS.Location = new System.Drawing.Point(0, 90);
-            this.btnRefJS.Name = "btnRefJS";
-            this.btnRefJS.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefJS.Size = new System.Drawing.Size(212, 45);
-            this.btnRefJS.TabIndex = 1;
-            this.btnRefJS.Text = "Jenis Simpanan";
-            this.btnRefJS.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefJS.UseVisualStyleBackColor = true;
-            // 
-            // btnRefDepAdd
-            // 
-            this.btnRefDepAdd.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRefDepAdd.FlatAppearance.BorderSize = 0;
-            this.btnRefDepAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRefDepAdd.ForeColor = System.Drawing.Color.White;
-            this.btnRefDepAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefDepAdd.Location = new System.Drawing.Point(0, 45);
-            this.btnRefDepAdd.Name = "btnRefDepAdd";
-            this.btnRefDepAdd.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefDepAdd.Size = new System.Drawing.Size(212, 45);
-            this.btnRefDepAdd.TabIndex = 2;
-            this.btnRefDepAdd.Text = "Departemen Add";
-            this.btnRefDepAdd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRefDepAdd.UseVisualStyleBackColor = true;
-            this.btnRefDepAdd.Click += new System.EventHandler(this.btnRefDepAdd_Click);
             // 
             // btnRefDep
             // 
@@ -135,7 +94,7 @@
             this.btnRefDep.Location = new System.Drawing.Point(0, 0);
             this.btnRefDep.Name = "btnRefDep";
             this.btnRefDep.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnRefDep.Size = new System.Drawing.Size(212, 45);
+            this.btnRefDep.Size = new System.Drawing.Size(229, 45);
             this.btnRefDep.TabIndex = 0;
             this.btnRefDep.Text = "Departemen";
             this.btnRefDep.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -151,7 +110,7 @@
             this.panelTransSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTransSubMenu.Location = new System.Drawing.Point(0, 266);
             this.panelTransSubMenu.Name = "panelTransSubMenu";
-            this.panelTransSubMenu.Size = new System.Drawing.Size(212, 140);
+            this.panelTransSubMenu.Size = new System.Drawing.Size(229, 140);
             this.panelTransSubMenu.TabIndex = 4;
             // 
             // button3
@@ -164,11 +123,12 @@
             this.button3.Location = new System.Drawing.Point(0, 90);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(212, 45);
+            this.button3.Size = new System.Drawing.Size(229, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Angsuran";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -180,7 +140,7 @@
             this.button4.Location = new System.Drawing.Point(0, 45);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button4.Size = new System.Drawing.Size(212, 45);
+            this.button4.Size = new System.Drawing.Size(229, 45);
             this.button4.TabIndex = 1;
             this.button4.Text = "Pinjaman";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -197,7 +157,7 @@
             this.button6.Location = new System.Drawing.Point(0, 0);
             this.button6.Name = "button6";
             this.button6.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.button6.Size = new System.Drawing.Size(212, 45);
+            this.button6.Size = new System.Drawing.Size(229, 45);
             this.button6.TabIndex = 0;
             this.button6.Text = "Simpanan";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -211,7 +171,7 @@
             this.panelAnggotaSubMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelAnggotaSubMenu.Location = new System.Drawing.Point(0, 174);
             this.panelAnggotaSubMenu.Name = "panelAnggotaSubMenu";
-            this.panelAnggotaSubMenu.Size = new System.Drawing.Size(212, 47);
+            this.panelAnggotaSubMenu.Size = new System.Drawing.Size(229, 47);
             this.panelAnggotaSubMenu.TabIndex = 3;
             // 
             // btnAnggotaList
@@ -224,7 +184,7 @@
             this.btnAnggotaList.Location = new System.Drawing.Point(0, 0);
             this.btnAnggotaList.Name = "btnAnggotaList";
             this.btnAnggotaList.Padding = new System.Windows.Forms.Padding(45, 0, 0, 0);
-            this.btnAnggotaList.Size = new System.Drawing.Size(212, 45);
+            this.btnAnggotaList.Size = new System.Drawing.Size(229, 45);
             this.btnAnggotaList.TabIndex = 0;
             this.btnAnggotaList.Text = "Daftar Anggota";
             this.btnAnggotaList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -238,16 +198,12 @@
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
             this.panelLogo.Name = "panelLogo";
-            this.panelLogo.Size = new System.Drawing.Size(212, 84);
+            this.panelLogo.Size = new System.Drawing.Size(229, 84);
             this.panelLogo.TabIndex = 0;
             // 
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelChildForm.Controls.Add(this.cbt1);
-            this.panelChildForm.Controls.Add(this.button1);
-            this.panelChildForm.Controls.Add(this.dtpt1);
-            this.panelChildForm.Controls.Add(this.label1);
             this.panelChildForm.Controls.Add(this.labelWelcome);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(229, 0);
@@ -255,54 +211,6 @@
             this.panelChildForm.Padding = new System.Windows.Forms.Padding(25, 25, 0, 25);
             this.panelChildForm.Size = new System.Drawing.Size(721, 600);
             this.panelChildForm.TabIndex = 1;
-            // 
-            // cbt1
-            // 
-            this.cbt1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbt1.FormattingEnabled = true;
-            this.cbt1.Items.AddRange(new object[] {
-            "3",
-            "6",
-            "12",
-            "18",
-            "24",
-            "36"});
-            this.cbt1.Location = new System.Drawing.Point(155, 51);
-            this.cbt1.Name = "cbt1";
-            this.cbt1.Size = new System.Drawing.Size(40, 24);
-            this.cbt1.TabIndex = 12;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.SteelBlue;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(314, 85);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Simpan";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // dtpt1
-            // 
-            this.dtpt1.CustomFormat = "yyyy, MM, dd";
-            this.dtpt1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpt1.Location = new System.Drawing.Point(155, 88);
-            this.dtpt1.Name = "dtpt1";
-            this.dtpt1.Size = new System.Drawing.Size(115, 23);
-            this.dtpt1.TabIndex = 10;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 174);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(46, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "label1";
             // 
             // labelWelcome
             // 
@@ -322,10 +230,10 @@
             this.btnSignOut.ForeColor = System.Drawing.Color.White;
             this.btnSignOut.Image = global::simpanpinjam.Properties.Resources.logout1;
             this.btnSignOut.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSignOut.Location = new System.Drawing.Point(0, 592);
+            this.btnSignOut.Location = new System.Drawing.Point(0, 555);
             this.btnSignOut.Name = "btnSignOut";
             this.btnSignOut.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnSignOut.Size = new System.Drawing.Size(212, 45);
+            this.btnSignOut.Size = new System.Drawing.Size(229, 45);
             this.btnSignOut.TabIndex = 6;
             this.btnSignOut.Text = "Sign Out";
             this.btnSignOut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -344,7 +252,7 @@
             this.btnRef.Location = new System.Drawing.Point(0, 406);
             this.btnRef.Name = "btnRef";
             this.btnRef.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnRef.Size = new System.Drawing.Size(212, 45);
+            this.btnRef.Size = new System.Drawing.Size(229, 45);
             this.btnRef.TabIndex = 1;
             this.btnRef.Text = "Referensi";
             this.btnRef.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -363,7 +271,7 @@
             this.btnTrans.Location = new System.Drawing.Point(0, 221);
             this.btnTrans.Name = "btnTrans";
             this.btnTrans.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnTrans.Size = new System.Drawing.Size(212, 45);
+            this.btnTrans.Size = new System.Drawing.Size(229, 45);
             this.btnTrans.TabIndex = 5;
             this.btnTrans.Text = "Transaksi";
             this.btnTrans.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -382,7 +290,7 @@
             this.btnAnggota.Location = new System.Drawing.Point(0, 129);
             this.btnAnggota.Name = "btnAnggota";
             this.btnAnggota.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnAnggota.Size = new System.Drawing.Size(212, 45);
+            this.btnAnggota.Size = new System.Drawing.Size(229, 45);
             this.btnAnggota.TabIndex = 4;
             this.btnAnggota.Text = "Anggota";
             this.btnAnggota.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -401,7 +309,7 @@
             this.btnHome.Location = new System.Drawing.Point(0, 84);
             this.btnHome.Name = "btnHome";
             this.btnHome.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
-            this.btnHome.Size = new System.Drawing.Size(212, 45);
+            this.btnHome.Size = new System.Drawing.Size(229, 45);
             this.btnHome.TabIndex = 3;
             this.btnHome.Text = "Dashboard";
             this.btnHome.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -448,7 +356,6 @@
 
         private System.Windows.Forms.Panel panelSideMenu;
         private System.Windows.Forms.Panel panelRefSubmenu;
-        private System.Windows.Forms.Button btnRefJS;
         private System.Windows.Forms.Button btnRefDep;
         private System.Windows.Forms.Button btnRef;
         private System.Windows.Forms.Panel panelAnggotaSubMenu;
@@ -457,7 +364,6 @@
         private System.Windows.Forms.Button btnHome;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Button btnRefDepAdd;
         private System.Windows.Forms.Panel panelTransSubMenu;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
@@ -466,10 +372,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSignOut;
         private System.Windows.Forms.Label labelWelcome;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dtpt1;
-        private System.Windows.Forms.ComboBox cbt1;
     }
 }
 

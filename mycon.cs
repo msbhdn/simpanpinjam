@@ -28,6 +28,19 @@ namespace simpanpinjam.myclass
 
         //REFERENSI ANGGOTA ===============================================================================================================================
 
+        public DataTable dtDash = new DataTable();
+
+        public void read_dashboard()
+        {
+            dtDash.Clear();
+            conOpen();
+            OdbcDataAdapter da = new OdbcDataAdapter("SELECT * FROM v_dashboard", con);
+            da.Fill(dtDash);
+            conClose();
+        }
+
+        //REFERENSI ANGGOTA ===============================================================================================================================
+
         //PROPERTIES
         public DataTable bankcbDept = new DataTable();
 
@@ -187,8 +200,56 @@ namespace simpanpinjam.myclass
 
         //REFERENSI PINJAMAN ==========================================================================================================================
 
+        public DataTable dtPinjaman = new DataTable();
+        public DataSet dsPinjaman = new DataSet();
+
+        //READ FUNCTION
+        public void read_dataPinjaman()
+        {
+            dtPinjaman.Clear();
+            string q = "select * from v_pinjaman";
+            OdbcDataAdapter oda = new OdbcDataAdapter(q, con);
+            oda.Fill(dsPinjaman);
+            dtPinjaman = dsPinjaman.Tables[0];
+        }
 
 
+        //REFERENSI ANGSURAN ============================================================================================================================
+
+        public DataTable dtAngsuran= new DataTable();
+        public DataSet dsAngsuran = new DataSet();
+
+        public DataTable dtBayar = new DataTable();
+        public DataTable dtTotal = new DataTable();
+
+        //READ FUNCTION
+
+        public void read_CekAngsuran(string name)
+        {
+            dtAngsuran.Clear();
+            con.Open();
+            OdbcDataAdapter da = new OdbcDataAdapter("SELECT * FROM v_cekangsur where angsur_id='" + name + "'", con);
+            da.Fill(dtAngsuran);
+        }
+
+        public void read_bayarangsur(string name)
+        {
+            conClose();
+            dtBayar.Clear();
+            con.Open();
+            OdbcDataAdapter da = new OdbcDataAdapter("SELECT * FROM v_bayarangsur where angsur_id='" + name + "'", con);
+            da.Fill(dtBayar);
+            con.Close();
+        }
+
+        public void read_totalbayar(string name)
+        {
+            dtTotal.Clear();
+            con.Open();
+            OdbcDataAdapter da = new OdbcDataAdapter("SELECT SUM(tmp_angsur) as tmp_bayar FROM v_bayarangsur where angsur_id='" + name + "'", con);
+            da.Fill(dtTotal);
+            con.Close();
+        }
 
         //REFERENSI DEPARTEMENT ==========================================================================================================================
 
